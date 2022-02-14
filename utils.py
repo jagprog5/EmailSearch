@@ -7,6 +7,9 @@ def get_config():
         config = yaml.safe_load(stream)
     return config
 
-def extract(pattern: str, txt: str) -> List[str]:
-    return re.findall(pattern, txt, re.IGNORECASE)
+def extract(patterns: List[str], txt: str) -> List[str]:
+    ret = []
+    for p in patterns:
+        ret.extend(re.findall(p, txt, re.IGNORECASE))
+    return ret
 

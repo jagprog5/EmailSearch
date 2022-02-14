@@ -1,4 +1,4 @@
-email: emailhere
+email: johngiorshev
 
 host: imap.gmail.com
 port: 993
@@ -6,4 +6,7 @@ port: 993
 mailbox: Test Label
 
 # case is ignored. a regex, with a group. The matched groups will be printed to the screen
-pattern: ((?:bitbucket|git(?:hub|lab))\.com/[a-z0-9\-]+|(?:[a-z0-9\-]+\.github\.io))
+patterns:
+  - ((?:bitbucket|git(?:hub|lab))\.com/[a-z0-9\-]+)
+  - ([a-z0-9\-]+\.github\.io)
+  - "((?:bitbucket|git(?:hub|lab)): /?[a-z0-9\\-]+)"

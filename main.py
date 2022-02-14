@@ -17,7 +17,7 @@ if __name__ == "__main__":
         exit()
     mail_ids = data[0]
     id_list = mail_ids.split()
-    pattern = config["pattern"]
+    patterns = config["patterns"]
 
     # Store all the matches
     matches = []
@@ -29,7 +29,7 @@ if __name__ == "__main__":
             exit()
         email_str = data[0][1].decode('utf-8')
         # look through the raw text of the entire email
-        raw_matches = extract(pattern, email_str)
+        raw_matches = extract(patterns, email_str)
         for r in raw_matches:
             if r not in matches:
                 matches.append(r)
@@ -45,7 +45,7 @@ if __name__ == "__main__":
                 continue
             parsed = parser.from_buffer(p.get_payload(decode=True))
             data = parsed["content"]
-            data_matches = extract(pattern, data)
+            data_matches = extract(patterns, data)
             for d in data_matches:
                 if d not in matches:
                     matches.append(d)
