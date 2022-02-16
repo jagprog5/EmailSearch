@@ -9,4 +9,4 @@ mailbox: Test Label
 patterns:
   - ((?:bitbucket|git(?:hub|lab))\.com/[a-z0-9\-]+)
   - ([a-z0-9\-]+\.github\.io)
-  - "((?:bitbucket|git(?:hub|lab)): /?[a-z0-9\\-]+)"
+  - "((?:bitbucket|git(?:hub|lab)):\\s*/?[a-z0-9\\-]+)"
