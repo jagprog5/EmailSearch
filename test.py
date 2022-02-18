@@ -7,4 +7,5 @@ if __name__ == "__main__":
     assert(extract(patterns, " my-name-is.github.io a") == ["my-name-is.github.io"])
     assert(extract(patterns, "here's my GitHub: /tester-here123 ") == ["GitHub: /tester-here123"])
     assert(extract(patterns, " gitlab:tester-here123 ") == ["gitlab:tester-here123"])
+    assert(extract(patterns, " git: /johnnyg ") == ["git: /johnnyg"])
     print("good!")
